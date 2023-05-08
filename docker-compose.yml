@@ -6,24 +6,24 @@ services:
     user: minecraft
     environment:
       # https://itzg.github.io/docker-minecraft-docs/java/environment/#server
-      TYPE: FORGE
-      EULA: TRUE
+      TYPE: "FORGE"
+      EULA: "true"
       PACKWIZ_URL: "https://github.com/klaribot/CivFun-packwiz/blob/master/packwiz/pack.toml?raw=true"
       ICON: "https://github.com/klaribot/CivFun-packwiz/blob/master/client/pack.png?raw=true"
-      OVERRIDE_ICON: TRUE
-      SETUP_ONLY: TRUE
-      ENABLE_AUTOPAUSE: TRUE
-      FORCE_GAMEMODE: TRUE
-      GENERATE_STRUCTURES: FALSE
-      SNOOPER_ENABLED: FALSE
-      SPAWN_NPCS: FALSE
-      SPAWN_PROTECTION: 0
-      STOP_SERVER_ANNOUNCE_DELAY: 60
-      ENABLE_WHITELIST: TRUE
-      OVERRIDE_WHITELIST: TRUE
-      GUI: FALSE
-      EXTRA_ARGS: '--universe ./worlds/'
-      USE_SIMD_FLAGS: TRUE
+      OVERRIDE_ICON: "true"
+      SETUP_ONLY: "true"
+      ENABLE_AUTOPAUSE: "true"
+      FORCE_GAMEMODE: "true"
+      GENERATE_STRUCTURES: "false"
+      SNOOPER_ENABLED: "false"
+      SPAWN_NPCS: "false"
+      SPAWN_PROTECTION: "0"
+      STOP_SERVER_ANNOUNCE_DELAY: "60"
+      ENABLE_WHITELIST: "true"
+      OVERRIDE_WHITELIST: "true"
+      GUI: "false"
+      EXTRA_ARGS: "--universe ./worlds/"
+      USE_SIMD_FLAGS: "true"
       # https://github.com/etil2jz/etil-minecraft-flags
       JVM_OPTS: "-Xms20G -Xmx20G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=40 -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=20 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -XX:-UseBiasedLocking -XX:UseAVX=3 -XX:+UseStringDeduplication -XX:+UseFastUnorderedTimeStamps -XX:+UseAES -XX:+UseAESIntrinsics -XX:UseSSE=4 -XX:+UseFMA -XX:AllocatePrefetchStyle=1 -XX:+UseLoopPredicate -XX:+RangeCheckElimination -XX:+EliminateLocks -XX:+DoEscapeAnalysis -XX:+UseCodeCacheFlushing -XX:+SegmentedCodeCache -XX:+UseFastJNIAccessors -XX:+OptimizeStringConcat -XX:+UseCompressedOops -XX:+UseThreadPriorities -XX:+OmitStackTraceInFastThrow -XX:+TrustFinalNonStaticFields -XX:ThreadPriorityPolicy=1 -XX:+UseInlineCaches -XX:+RewriteBytecodes -XX:+RewriteFrequentPairs -XX:+UseNUMA -XX:-DontCompileHugeMethods -XX:+UseFPUForSpilling -XX:+UseFastStosb -XX:+UseNewLongLShift -XX:+UseVectorCmov -XX:+UseXMMForArrayCopy -XX:+UseXmmI2D -XX:+UseXmmI2F -XX:+UseXmmLoadAndClearUpper -XX:+UseXmmRegToRegMoveAll -Dfile.encoding=UTF-8 -Xlog:async -Djava.security.egd=file:/dev/urandom --add-modules jdk.incubator.vector"
       RCON_PASSWORD_FILE: "/run/secrets/rcon_password"
