@@ -28,7 +28,7 @@ ENV EXTRA_ARGS="--universe ./worlds/"
 ENV GUI="false"
 ENV USE_SIMD_FLAGS="true"
 
-# FOR DEBUG ONLY; REMOVE THIS AS SOON AS NOT USEFUL
-RUN cat /etc/passwd
 # create a new system user and system group to restrict our container's runtime
-RUN useradd --system --no-create-home --user-group minecraft
+#RUN useradd --system --no-create-home --user-group minecraft
+# apparently, the image already includes a 'minecraft' user with UID and GID 1000. This is fine, then. :)
+USER minecraft
