@@ -5,7 +5,7 @@ services:
     image: civfun-forge:latest
     build: server
     command: >
-      ls -LA /run/secrets
+      /bin/bash -c "ls -LA /run/secrets"
     restart: unless-stopped
     #user: minecraft
     environment:
