@@ -47,7 +47,7 @@ services:
       resources:
         reservations:
           cpus: "7"
-          memory: 13g
+          memory: 14g
 
   backup:
     #container_name: backup
@@ -55,6 +55,7 @@ services:
     restart: unless-stopped
     #user: minecraft
     environment:
+      INITIAL_DELAY: "7m"
       BACKUP_INTERVAL: "12h"
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
 
