@@ -4,8 +4,6 @@ services:
     #image: itzg/minecraft-server:java17
     image: civfun-forge:latest
     build: server
-    command: >
-      /bin/bash -c "ls -LA /run/secrets"
     restart: unless-stopped
     #user: minecraft
     environment:
@@ -20,7 +18,7 @@ services:
       STOP_SERVER_ANNOUNCE_DELAY: "60"
       ENABLE_WHITELIST: "true"
       OVERRIDE_WHITELIST: "true"
-      RCON_PASSWORD_FILE: "/run/secrets/rcon_password"
+      RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
     secrets:
       - rcon-password
 
@@ -43,7 +41,7 @@ services:
     #user: minecraft
     environment:
       BACKUP_INTERVAL: "12h"
-      RCON_PASSWORD_FILE: "/run/secrets/rcon_password"
+      RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
     secrets:
       - rcon-password
 
