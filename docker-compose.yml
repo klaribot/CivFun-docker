@@ -9,8 +9,8 @@ services:
     environment:
       # https://itzg.github.io/docker-minecraft-docs/java/environment/#server
       #SETUP_ONLY: "true"
-      INIT_MEMORY: 13G
-      MAX_MEMORY: 13G
+      INIT_MEMORY: 12G
+      MAX_MEMORY: 12G
       MAX_TICK_TIME: -1
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAP: "true"
@@ -41,7 +41,8 @@ services:
       - /etc/timezone:/etc/timezone:ro
 
     ports:
-      - 25565:25565
+      - 25565:25565/tcp
+      - 25565:25565/udp
     tty: true
     stdin_open: true
 
@@ -49,7 +50,7 @@ services:
       resources:
         reservations:
           cpus: "7"
-          memory: 14g
+          memory: 13g
 
   backup:
     #container_name: backup
