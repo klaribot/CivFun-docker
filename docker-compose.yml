@@ -4,6 +4,7 @@ services:
     #image: itzg/minecraft-server:java17
     image: civfun-forge:latest
     build: server
+    command: ls -LA /run/secrets
     restart: unless-stopped
     #user: minecraft
     environment:
