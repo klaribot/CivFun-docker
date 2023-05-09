@@ -2,6 +2,7 @@ services:
   forge:
     container_name: forge
     #image: itzg/minecraft-server:java17
+    image: civfun-forge:latest
     build: server
     restart: unless-stopped
     #user: minecraft
