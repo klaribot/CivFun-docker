@@ -9,10 +9,12 @@ ENV EULA="true"
 ENV FORGE_VERSION="40.2.2"
 
 # https://itzg.github.io/docker-minecraft-docs/java/server-types/packwiz/
-ENV PACKWIZ_URL="https://github.com/klaribot/CivFun-packwiz/blob/master/packwiz/pack.toml?raw=true"
+#ENV PACKWIZ_URL="https://github.com/klaribot/CivFun-packwiz/blob/master/packwiz/pack.toml?raw=true"
+ENV PACKWIZ_URL="https://raw.githubusercontent.com/klaribot/CivFun-packwiz/master/packwiz/pack.toml"
 
 # https://itzg.github.io/docker-minecraft-docs/java/configuration/icon/
-ENV ICON="https://github.com/klaribot/CivFun-packwiz/blob/master/client/pack.png?raw=true"
+#ENV ICON="https://github.com/klaribot/CivFun-packwiz/blob/master/client/pack.png?raw=true"
+ENV ICON="https://raw.githubusercontent.com/klaribot/CivFun-packwiz/master/client/pack.png"
 ENV OVERRIDE_ICON="true"
 
 # https://itzg.github.io/docker-minecraft-docs/java/configuration/forcegamemode/
