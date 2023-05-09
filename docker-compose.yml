@@ -11,6 +11,7 @@ services:
       #SETUP_ONLY: "true"
       INIT_MEMORY: 13G
       MAX_MEMORY: 13G
+      MAX_TICK_TIME: -1
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAP: "true"
       ENABLE_AUTOPAUSE: "true"
