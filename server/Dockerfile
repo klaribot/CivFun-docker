@@ -31,5 +31,5 @@ ENV USE_SIMD_FLAGS="true"
 # create a new system user and system group to restrict our container's runtime
 #RUN useradd --system --no-create-home --user-group minecraft
 # apparently, the image already includes a 'minecraft' user with UID and GID 1000. This is fine, then. :)
-RUN chown minecraft /data && chgrp minecraft /data 
-USER minecraft
+#RUN chown minecraft /data && chgrp minecraft /data 
+#USER minecraft
