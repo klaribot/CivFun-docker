@@ -9,8 +9,8 @@ services:
     environment:
       # https://itzg.github.io/docker-minecraft-docs/java/environment/#server
       #SETUP_ONLY: "true"
-      INIT_MEMORY: 14G
-      MAX_MEMORY: 14G
+      INIT_MEMORY: 13G
+      MAX_MEMORY: 13G
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAP: "true"
       ENABLE_AUTOPAUSE: "true"
@@ -23,6 +23,7 @@ services:
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
 
     secrets:
+      # https://forums.docker.com/t/unable-set-docker-secret-file-ownership-permissions/31336
       - source: rcon-password
         target: rcon-password
         # This should be the UID and GID of the minecraft user
@@ -41,6 +42,12 @@ services:
       - 25565:25565
     tty: true
     stdin_open: true
+
+    deploy:
+      resources:
+        reservations:
+          cpus: "7"
+          memory: 13g
 
   backup:
     #container_name: backup
