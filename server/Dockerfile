@@ -29,4 +29,4 @@ ENV GUI="false"
 ENV USE_SIMD_FLAGS="true"
 
 # create a new system user and system group to restrict our container's runtime
-RUN adduser --system --no-create-home --group minecraft
+RUN useradd --system --no-create-home --user-group minecraft
