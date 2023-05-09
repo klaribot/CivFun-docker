@@ -6,6 +6,7 @@ ENV VERSION=1.18.2
 # https://itzg.github.io/docker-minecraft-docs/java/server-types/forge/
 ENV TYPE="FORGE"
 ENV EULA="true"
+ENV FORGE_VERSION="40.2.2"
 
 # https://itzg.github.io/docker-minecraft-docs/java/server-types/packwiz/
 ENV PACKWIZ_URL="https://github.com/klaribot/CivFun-packwiz/blob/master/packwiz/pack.toml?raw=true"
