@@ -19,8 +19,14 @@ services:
       ENABLE_WHITELIST: "true"
       OVERRIDE_WHITELIST: "true"
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
+
     secrets:
-      - rcon-password
+      - source: rcon-password
+        target: rcon-password
+        # This should be the UID and GID of the minecraft user
+        uid: "1000"
+        gid: "1000"
+        mode: 0440
 
     volumes:
       - /opt/minecraft/servers/civfun:/data
@@ -42,8 +48,14 @@ services:
     environment:
       BACKUP_INTERVAL: "12h"
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
+
     secrets:
-      - rcon-password
+      - source: rcon-password
+        target: rcon-password
+        # This should be the UID and GID of the minecraft user
+        uid: "1000"
+        gid: "1000"
+        mode: 0440
 
     volumes:
       # mount the same volume used by server, but read-only
