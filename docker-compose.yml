@@ -63,4 +63,4 @@ services:
 secrets:
   rcon-password:
     #TODO: https://anthonymineo.com/rotating-your-docker-secrets-can-be-easy-if-you-plan-for-it/
-    environment: ${RCON_PASSWORD}
+    environment: RCON_PASSWORD
