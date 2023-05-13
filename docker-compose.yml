@@ -29,6 +29,8 @@ services:
       OPS_FILE: "/extra/ops.json"
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
       EXTRA_ARGS: "--universe ./universe/"
+      
+      OP: "Huskydog9988"
 
     secrets:
       # https://forums.docker.com/t/unable-set-docker-secret-file-ownership-permissions/31336
