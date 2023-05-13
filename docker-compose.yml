@@ -26,7 +26,7 @@ services:
       OVERRIDE_WHITELIST: "true"
       WHITELIST_FILE: "/extra/whitelist.json"
       OVERRIDE_OPS: "TRUE"
-      OPS_FILE: "/extra/whitelist.json"
+      OPS_FILE: "/extra/ops.json"
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
       EXTRA_ARGS: "--universe ./universe/"
 
