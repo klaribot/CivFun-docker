@@ -15,12 +15,18 @@ services:
       ENABLE_ROLLING_LOGS: "true"
       LOG_TIMESTAP: "true"
       ENABLE_AUTOPAUSE: "true"
-      GENERATE_STRUCTURES: "false"
-      SPAWN_NPCS: "false"
+      #GENERATE_STRUCTURES: "false"
+      #SPAWN_NPCS: "false"
+      MAX_WORLD_SIZE: 10000
+      FORCE_GAMEMODE: "true"
       SPAWN_PROTECTION: "0"
       STOP_SERVER_ANNOUNCE_DELAY: "60"
       ENABLE_WHITELIST: "true"
+      ENFORCE_WHITELIST: "true"
       OVERRIDE_WHITELIST: "true"
+      WHITELIST_FILE: "/extra/whitelist.json"
+      OVERRIDE_OPS: "TRUE"
+      OPS_FILE: "/extra/whitelist.json"
       RCON_PASSWORD_FILE: "/run/secrets/rcon-password"
       EXTRA_ARGS: "--universe ./universe/"
 
@@ -29,13 +35,16 @@ services:
       - source: rcon-password
         target: rcon-password
         # This should be the UID and GID of the minecraft user
+        # has a weird side effect of also appearing like it belongs to the host user with UID 1000
         uid: "1000"
         gid: "1000"
         mode: 0440
 
     volumes:
       - /opt/minecraft/servers/civfun:/data
-
+      # Change this to read-only once it is populated with the trusted UUIDs
+      - ./config/whitelist.json:/extra/whitelist.json:rw
+      - ./config/ops.json:/extra/ops.json:rw
       # https://itzg.github.io/docker-minecraft-docs/java/configuration/misc-options/#timezone-configuration
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro

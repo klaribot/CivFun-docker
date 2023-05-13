@@ -17,9 +17,6 @@ ENV PACKWIZ_URL="https://raw.githubusercontent.com/klaribot/CivFun-packwiz/maste
 ENV ICON="https://raw.githubusercontent.com/klaribot/CivFun-packwiz/master/client/pack.png"
 ENV OVERRIDE_ICON="true"
 
-# https://itzg.github.io/docker-minecraft-docs/java/configuration/forcegamemode/
-ENV FORCE_GAMEMODE="true"
-
 # https://itzg.github.io/docker-minecraft-docs/java/configuration/snooper/
 ENV SNOOPER_ENABLED="false"
 
