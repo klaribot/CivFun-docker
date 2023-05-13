@@ -9,7 +9,7 @@ services:
     environment:
       # https://itzg.github.io/docker-minecraft-docs/java/environment/#server
       #SETUP_ONLY: "true"
-      INIT_MEMORY: 14G
+      INIT_MEMORY: 10G
       MAX_MEMORY: 14G
       MAX_TICK_TIME: -1
       ENABLE_ROLLING_LOGS: "true"
